@@ -1,0 +1,48 @@
+{
+  "name": "localheinz/composer-json-normalizer",
+  "type": "library",
+  "description": "Provides normalizers for normalizing composer.json.",
+  "keywords": [
+    "composer",
+    "json",
+    "normalizer"
+  ],
+  "homepage": "https://github.com/localheinz/composer-json-normalizer",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreas Möller",
+      "email": "am@localheinz.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "infection/infection": "~0.11.1",
+    "localheinz/php-cs-fixer-config": "~1.16.0",
+    "localheinz/phpstan-rules": "~0.2.0",
+    "localheinz/test-util": "~0.7.0",
+    "phpstan/phpstan": "~0.10.5",
+    "phpstan/phpstan-strict-rules": "~0.10.1",
+    "phpunit/phpunit": "^7.4.3"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Localheinz\\Composer\\Json\\Normalizer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Localheinz\\Composer\\Json\\Normalizer\\Test\\": "test/"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/localheinz/composer-json-normalizer/issues",
+    "source": "https://github.com/localheinz/composer-json-normalizer"
+  }
+}
