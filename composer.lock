@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42202bb5c0ad8af374bcd0bbc18a81bb",
+    "content-hash": "9cd3cc57de307101f99f6d092e65ea58",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -478,16 +478,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
                 "shasum": ""
             },
             "require": {
@@ -521,7 +521,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2018-11-20T15:27:04+00:00"
         },
         {
             "name": "seld/jsonlint",
@@ -1453,16 +1453,16 @@
         },
         {
             "name": "localheinz/php-cs-fixer-config",
-            "version": "1.16.0",
+            "version": "1.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/localheinz/php-cs-fixer-config.git",
-                "reference": "35e63ae236a53f7c0327d62537a7b98d3d25bcdb"
+                "reference": "fcdf8540b50ab3a6eac8c6015914af6f88db41ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/localheinz/php-cs-fixer-config/zipball/35e63ae236a53f7c0327d62537a7b98d3d25bcdb",
-                "reference": "35e63ae236a53f7c0327d62537a7b98d3d25bcdb",
+                "url": "https://api.github.com/repos/localheinz/php-cs-fixer-config/zipball/fcdf8540b50ab3a6eac8c6015914af6f88db41ae",
+                "reference": "fcdf8540b50ab3a6eac8c6015914af6f88db41ae",
                 "shasum": ""
             },
             "require": {
@@ -1490,7 +1490,7 @@
             ],
             "description": "Provides a configuration factory and multiple rule sets for friendsofphp/php-cs-fixer.",
             "homepage": "https://github.com/localheinz/php-cs-fixer-config",
-            "time": "2018-11-15T13:53:06+00:00"
+            "time": "2018-11-20T22:00:43+00:00"
         },
         {
             "name": "localheinz/phpstan-rules",
