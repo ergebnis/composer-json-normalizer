@@ -132,7 +132,7 @@ jobs:
         - mkdir -p $HOME/.infection
 
       script:
-        - vendor/bin/infection --min-covered-msi=80 --min-msi=80
+        - vendor/bin/infection --min-covered-msi=94 --min-msi=94
 
 notifications:
   email: false
