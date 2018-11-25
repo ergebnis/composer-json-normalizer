@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cd3cc57de307101f99f6d092e65ea58",
+    "content-hash": "8471bcce532bc37666a446994462f19e",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1494,16 +1494,16 @@
         },
         {
             "name": "localheinz/phpstan-rules",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/localheinz/phpstan-rules.git",
-                "reference": "f1282bcd266c85697f17f6fe9f6bb37e35eb09a2"
+                "reference": "e73d0627cc05d2606d8dba6b05b9df184cc6ad1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/localheinz/phpstan-rules/zipball/f1282bcd266c85697f17f6fe9f6bb37e35eb09a2",
-                "reference": "f1282bcd266c85697f17f6fe9f6bb37e35eb09a2",
+                "url": "https://api.github.com/repos/localheinz/phpstan-rules/zipball/e73d0627cc05d2606d8dba6b05b9df184cc6ad1e",
+                "reference": "e73d0627cc05d2606d8dba6b05b9df184cc6ad1e",
                 "shasum": ""
             },
             "require": {
@@ -1513,8 +1513,8 @@
             },
             "require-dev": {
                 "infection/infection": "~0.11.1",
-                "localheinz/composer-normalize": "~0.9.0",
-                "localheinz/php-cs-fixer-config": "~1.16.0",
+                "localheinz/composer-normalize": "^1.0.0",
+                "localheinz/php-cs-fixer-config": "~1.16.1",
                 "localheinz/test-util": "~0.7.0",
                 "phpstan/phpstan-strict-rules": "~0.10.1",
                 "phpunit/phpunit": "^7.4.3"
@@ -1539,9 +1539,10 @@
             "homepage": "https://github.com/localheinz/phpstan-rules",
             "keywords": [
                 "PHPStan",
+                "phpstan-extreme-rules",
                 "phpstan-rules"
             ],
-            "time": "2018-11-15T15:02:20+00:00"
+            "time": "2018-11-25T10:14:39+00:00"
         },
         {
             "name": "localheinz/test-util",
