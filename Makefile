@@ -12,7 +12,7 @@ cs: vendor
 
 infection: vendor
 	mkdir -p .infection
-	vendor/bin/infection --min-covered-msi=80 --min-msi=80
+	vendor/bin/infection --min-covered-msi=94 --min-msi=94
 
 stan: vendor
 	mkdir -p .phpstan
