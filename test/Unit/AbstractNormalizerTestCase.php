@@ -46,7 +46,7 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertSame($json->encoded(), $normalized->encoded());
+        self::assertSame($json->encoded(), $normalized->encoded());
     }
 
     public function providerJsonNotDecodingToObject(): \Generator
