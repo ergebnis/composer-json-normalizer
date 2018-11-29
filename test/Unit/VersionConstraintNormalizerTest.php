@@ -42,7 +42,7 @@ JSON
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertSame($json->encoded(), $normalized->encoded());
+        self::assertSame($json->encoded(), $normalized->encoded());
     }
 
     public function providerVersionConstraint(): \Generator
@@ -73,7 +73,7 @@ JSON
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertSame(\json_encode(\json_decode($json->encoded())), $normalized->encoded());
+        self::assertSame(\json_encode(\json_decode($json->encoded())), $normalized->encoded());
     }
 
     public function providerProperty(): \Generator
@@ -120,7 +120,7 @@ JSON
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertJsonStringEqualsJsonString($expected->encoded(), $normalized->encoded());
+        self::assertJsonStringEqualsJsonString($expected->encoded(), $normalized->encoded());
     }
 
     public function providerPropertyAndVersionConstraint(): \Generator
@@ -172,7 +172,7 @@ JSON
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertJsonStringEqualsJsonString($expected->encoded(), $normalized->encoded());
+        self::assertJsonStringEqualsJsonString($expected->encoded(), $normalized->encoded());
     }
 
     public function providerPropertyAndUntrimmedVersionConstraint(): \Generator

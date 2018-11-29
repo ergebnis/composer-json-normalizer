@@ -50,8 +50,8 @@ final class ComposerJsonNormalizerTest extends AbstractNormalizerTestCase
 
         $schemaNormalizer = \array_shift($chainedNormalizers);
 
-        $this->assertInstanceOf(SchemaNormalizer::class, $schemaNormalizer);
-        $this->assertAttributeSame('https://getcomposer.org/schema.json', 'schemaUri', $schemaNormalizer);
+        self::assertInstanceOf(SchemaNormalizer::class, $schemaNormalizer);
+        self::assertAttributeSame('https://getcomposer.org/schema.json', 'schemaUri', $schemaNormalizer);
     }
 
     public function testNormalizeNormalizes(): void
@@ -207,7 +207,7 @@ JSON
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertSame(\json_encode(\json_decode($expected->encoded())), $normalized->encoded());
+        self::assertSame(\json_encode(\json_decode($expected->encoded())), $normalized->encoded());
     }
 
     private function assertComposesNormalizer(string $className, NormalizerInterface $normalizer): void
@@ -217,14 +217,14 @@ JSON
 
         $attributeName = 'normalizer';
 
-        $this->assertObjectHasAttribute($attributeName, $normalizer, \sprintf(
+        self::assertObjectHasAttribute($attributeName, $normalizer, \sprintf(
             'Failed asserting that a normalizer has an attribute "%s".',
             $attributeName
         ));
 
         $composedNormalizer = $this->composedNormalizer($normalizer);
 
-        $this->assertInstanceOf($className, $composedNormalizer, \sprintf(
+        self::assertInstanceOf($className, $composedNormalizer, \sprintf(
             'Failed asserting that a normalizer composes a normalizer of type "%s".',
             $className
         ));
@@ -239,7 +239,7 @@ JSON
 
         $attributeName = 'normalizers';
 
-        $this->assertObjectHasAttribute($attributeName, $normalizer, \sprintf(
+        self::assertObjectHasAttribute($attributeName, $normalizer, \sprintf(
             'Failed asserting that a normalizer has an attribute "%s".',
             $attributeName
         ));
@@ -250,7 +250,7 @@ JSON
             return \get_class($normalizer);
         }, $composedNormalizers);
 
-        $this->assertSame(
+        self::assertSame(
             $classNames,
             $composedNormalizerClassNames,
             'Failed asserting that a normalizer composes normalizers as expected.'

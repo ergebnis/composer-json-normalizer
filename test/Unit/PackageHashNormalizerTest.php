@@ -38,7 +38,7 @@ JSON
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertSame($json->encoded(), $normalized->encoded());
+        self::assertSame($json->encoded(), $normalized->encoded());
     }
 
     /**
@@ -60,7 +60,7 @@ JSON
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertSame(\json_encode(\json_decode($json->encoded())), $normalized->encoded());
+        self::assertSame(\json_encode(\json_decode($json->encoded())), $normalized->encoded());
     }
 
     /**
@@ -112,7 +112,7 @@ JSON
 
         $normalized = $normalizer->normalize($json);
 
-        $this->assertSame(\json_encode(\json_decode($expected->encoded())), $normalized->encoded());
+        self::assertSame(\json_encode(\json_decode($expected->encoded())), $normalized->encoded());
     }
 
     public function providerProperty(): \Generator
