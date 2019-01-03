@@ -257,27 +257,22 @@ JSON
         );
     }
 
-    private function composedNormalizer(NormalizerInterface $normalizer)
-    {
-        return $this->attributeValue(
-            'normalizer',
-            $normalizer
-        );
-    }
-
-    private function composedNormalizers(NormalizerInterface $normalizer)
-    {
-        return $this->attributeValue(
-            'normalizers',
-            $normalizer
-        );
-    }
-
-    private function attributeValue(string $name, NormalizerInterface $normalizer)
+    private function composedNormalizer(NormalizerInterface $normalizer): NormalizerInterface
     {
         $reflection = new \ReflectionObject($normalizer);
 
-        $property = $reflection->getProperty($name);
+        $property = $reflection->getProperty('normalizer');
+
+        $property->setAccessible(true);
+
+        return $property->getValue($normalizer);
+    }
+
+    private function composedNormalizers(NormalizerInterface $normalizer): array
+    {
+        $reflection = new \ReflectionObject($normalizer);
+
+        $property = $reflection->getProperty('normalizers');
 
         $property->setAccessible(true);
 
