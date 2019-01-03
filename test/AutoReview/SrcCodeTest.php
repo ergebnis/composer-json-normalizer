@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @see https://github.com/localheinz/composer-json-normalizer
  */
 
-namespace Localheinz\Repository\Test\AutoReview;
+namespace Localheinz\Composer\Json\Normalizer\Test\AutoReview;
 
 use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
