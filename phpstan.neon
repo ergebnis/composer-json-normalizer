@@ -3,4 +3,6 @@ includes:
 	- vendor/localheinz/phpstan-rules/rules.neon
 
 parameters:
+	ignoreErrors:
+		- '#Constructor in Localheinz\\Composer\\Json\\Normalizer\\ComposerJsonNormalizer has parameter \$schemaUri with default value.#'
 	tmpDir: %rootDir%/.phpstan
