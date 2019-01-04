@@ -1,8 +1,12 @@
 includes:
-	- vendor/phpstan/phpstan-strict-rules/rules.neon
 	- vendor/localheinz/phpstan-rules/rules.neon
+	- vendor/phpstan/phpstan-strict-rules/rules.neon
+	- vendor/phpstan/phpstan/conf/config.levelmax.neon
 
 parameters:
 	ignoreErrors:
 		- '#Constructor in Localheinz\\Composer\\Json\\Normalizer\\ComposerJsonNormalizer has parameter \$schemaUri with default value.#'
-	tmpDir: %rootDir%/.phpstan
+	paths:
+		- src
+		- test
+	tmpDir: %currentWorkingDirectory%/.build/phpstan
