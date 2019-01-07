@@ -51,7 +51,6 @@ final class ComposerJsonNormalizerTest extends AbstractNormalizerTestCase
         $schemaNormalizer = \array_shift($chainedNormalizers);
 
         self::assertInstanceOf(SchemaNormalizer::class, $schemaNormalizer);
-        self::assertAttributeSame('https://getcomposer.org/schema.json', 'schemaUri', $schemaNormalizer);
     }
 
     public function testNormalizeNormalizes(): void
