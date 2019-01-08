@@ -6,9 +6,10 @@ env:
 
 cache:
   directories:
+    - $HOME/.build/php-cs-fixer
+    - $HOME/.build/phpstan
+    - $HOME/.build/phpunit
     - $HOME/.composer/cache
-    - $HOME/.php-cs-fixer
-    - $HOME/.phpstan
 
 stages:
   - style
