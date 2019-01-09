@@ -20,6 +20,11 @@ use Localheinz\Json\Normalizer\NormalizerInterface;
 final class PackageHashNormalizer implements NormalizerInterface
 {
     /**
+     * @see https://github.com/composer/composer/blob/1.6.2/src/Composer/Repository/PlatformRepository.php#L27
+     */
+    private const PLATFORM_PACKAGE_REGEX = '{^(?:php(?:-64bit|-ipv6|-zts|-debug)?|hhvm|(?:ext|lib)-[^/ ]+)$}i';
+
+    /**
      * @var string[]
      */
     private static $properties = [
@@ -77,7 +82,7 @@ final class PackageHashNormalizer implements NormalizerInterface
     private function sortPackages(array $packages): array
     {
         $prefix = static function ($requirement) {
-            if (1 === \preg_match(Repository\PlatformRepository::PLATFORM_PACKAGE_REGEX, $requirement)) {
+            if (1 === \preg_match(self::PLATFORM_PACKAGE_REGEX, $requirement)) {
                 return \preg_replace(
                     [
                         '/^php/',
