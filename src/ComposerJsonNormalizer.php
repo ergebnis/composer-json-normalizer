@@ -25,8 +25,15 @@ final class ComposerJsonNormalizer implements NormalizerInterface
      */
     private $normalizer;
 
-    public function __construct(string $schemaUri = 'https://getcomposer.org/schema.json')
+    public function __construct(string $schemaUri = '')
     {
+        if ('' === $schemaUri) {
+            $schemaUri = \sprintf(
+                'file://%s',
+                \realpath(__DIR__ . '/../../../../vendor/composer/composer/res/composer-schema.json')
+            );
+        }
+
         $this->normalizer = new ChainNormalizer(
             new SchemaNormalizer($schemaUri),
             new BinNormalizer(),
