@@ -7,6 +7,7 @@ includes:
 parameters:
 	ignoreErrors:
 		- '#Constructor in Localheinz\\Composer\\Json\\Normalizer\\ComposerJsonNormalizer has parameter \$schemaUri with default value.#'
+	inferPrivatePropertyTypeFromConstructor: true
 	paths:
 		- src
 		- test
