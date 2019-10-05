@@ -18,6 +18,7 @@ use Localheinz\Json\Normalizer\Json;
 
 /**
  * @internal
+ * @coversNothing
  */
 final class VersionConstraintNormalizerTest extends AbstractNormalizerTestCase
 {
@@ -29,10 +30,10 @@ final class VersionConstraintNormalizerTest extends AbstractNormalizerTestCase
     public function testNormalizeDoesNotModifyOtherProperty(string $constraint): void
     {
         $json = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
   "foo": {
-    "bar/baz": "${constraint}"
+    "bar/baz": "{$constraint}"
   }
 }
 JSON
@@ -62,9 +63,9 @@ JSON
     public function testNormalizeIgnoresEmptyPackageHash(string $property): void
     {
         $json = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {}
+  "{$property}": {}
 }
 JSON
         );
@@ -97,20 +98,20 @@ JSON
     public function testNormalizeNormalizesVersionConstraints(string $property, string $versionConstraint, string $normalizedVersionConstraint): void
     {
         $json = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {
-    "bar/baz": "${versionConstraint}"
+  "{$property}": {
+    "bar/baz": "{$versionConstraint}"
   }
 }
 JSON
         );
 
         $expected = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {
-    "bar/baz": "${normalizedVersionConstraint}"
+  "{$property}": {
+    "bar/baz": "{$normalizedVersionConstraint}"
   }
 }
 JSON
@@ -149,20 +150,20 @@ JSON
     public function testNormalizeNormalizesTrimsVersionConstraints(string $property, string $versionConstraint, string $trimmedVersionConstraint): void
     {
         $json = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {
-    "bar/baz": "${versionConstraint}"
+  "{$property}": {
+    "bar/baz": "{$versionConstraint}"
   }
 }
 JSON
         );
 
         $expected = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {
-    "bar/baz": "${trimmedVersionConstraint}"
+  "{$property}": {
+    "bar/baz": "{$trimmedVersionConstraint}"
   }
 }
 JSON

@@ -18,13 +18,14 @@ use Localheinz\Json\Normalizer\Json;
 
 /**
  * @internal
+ * @coversNothing
  */
 final class ConfigHashNormalizerTest extends AbstractNormalizerTestCase
 {
     public function testNormalizeDoesNotModifyOtherProperty(): void
     {
         $json = Json::fromEncoded(
-<<<'JSON'
+            <<<'JSON'
 {
   "foo": {
     "qux": "quux",
@@ -49,9 +50,9 @@ JSON
     public function testNormalizeIgnoresEmptyConfigHash(string $property): void
     {
         $json = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {}
+  "{$property}": {}
 }
 JSON
         );
@@ -71,9 +72,9 @@ JSON
     public function testNormalizeSortsConfigHashIfPropertyExists(string $property): void
     {
         $json = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {
+  "{$property}": {
     "sort-packages": true,
     "preferred-install": "dist"
   },
@@ -86,9 +87,9 @@ JSON
         );
 
         $expected = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {
+  "{$property}": {
     "preferred-install": "dist",
     "sort-packages": true
   },
