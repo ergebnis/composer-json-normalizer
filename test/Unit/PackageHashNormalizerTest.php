@@ -18,7 +18,8 @@ use Localheinz\Json\Normalizer\Json;
 
 /**
  * @internal
- * @coversNothing
+ *
+ * @covers \Localheinz\Composer\Json\Normalizer\PackageHashNormalizer
  */
 final class PackageHashNormalizerTest extends AbstractNormalizerTestCase
 {

@@ -18,7 +18,8 @@ use Localheinz\Json\Normalizer\Json;
 
 /**
  * @internal
- * @coversNothing
+ *
+ * @covers \Localheinz\Composer\Json\Normalizer\VersionConstraintNormalizer
  */
 final class VersionConstraintNormalizerTest extends AbstractNormalizerTestCase
 {

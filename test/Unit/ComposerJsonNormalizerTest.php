@@ -25,7 +25,8 @@ use Localheinz\Json\Normalizer\SchemaNormalizer;
 
 /**
  * @internal
- * @coversNothing
+ *
+ * @covers \Localheinz\Composer\Json\Normalizer\ComposerJsonNormalizer
  */
 final class ComposerJsonNormalizerTest extends AbstractNormalizerTestCase
 {
