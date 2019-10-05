@@ -18,13 +18,15 @@ use Localheinz\Json\Normalizer\Json;
 
 /**
  * @internal
+ *
+ * @covers \Localheinz\Composer\Json\Normalizer\BinNormalizer
  */
 final class BinNormalizerTest extends AbstractNormalizerTestCase
 {
     public function testNormalizeDoesNotModifyOtherProperty(): void
     {
         $json = Json::fromEncoded(
-<<<'JSON'
+            <<<'JSON'
 {
   "foo": {
     "qux": "quux",
@@ -44,7 +46,7 @@ JSON
     public function testNormalizeDoesNotModifyBinIfPropertyExistsAsString(): void
     {
         $json = Json::fromEncoded(
-<<<'JSON'
+            <<<'JSON'
 {
   "bin": "foo.php",
   "foo": {
@@ -65,7 +67,7 @@ JSON
     public function testNormalizeSortsBinIfPropertyExistsAsArray(): void
     {
         $json = Json::fromEncoded(
-<<<'JSON'
+            <<<'JSON'
 {
   "bin": [
     "script.php",
@@ -80,7 +82,7 @@ JSON
         );
 
         $expected = Json::fromEncoded(
-<<<'JSON'
+            <<<'JSON'
 {
   "bin": [
     "another-script.php",

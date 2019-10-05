@@ -18,13 +18,15 @@ use Localheinz\Json\Normalizer\Json;
 
 /**
  * @internal
+ *
+ * @covers \Localheinz\Composer\Json\Normalizer\PackageHashNormalizer
  */
 final class PackageHashNormalizerTest extends AbstractNormalizerTestCase
 {
     public function testNormalizeDoesNotModifyOtherProperty(): void
     {
         $json = Json::fromEncoded(
-<<<'JSON'
+            <<<'JSON'
 {
   "foo": {
     "qux": "quux",
@@ -49,9 +51,9 @@ JSON
     public function testNormalizeIgnoresEmptyPackageHash(string $property): void
     {
         $json = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {}
+  "{$property}": {}
 }
 JSON
         );
@@ -71,9 +73,9 @@ JSON
     public function testNormalizeSortsPackageHashIfPropertyExists(string $property): void
     {
         $json = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {
+  "{$property}": {
     "localheinz/test-util": "Provides utilities for tests.",
     "hhvm": "Okay",
     "lib-baz": "Maybe it helps.",
@@ -90,9 +92,9 @@ JSON
         );
 
         $expected = Json::fromEncoded(
-<<<JSON
+            <<<JSON
 {
-  "${property}": {
+  "{$property}": {
     "php": "Because why not, it's great.",
     "hhvm": "Okay",
     "ext-foo": "Could be useful",

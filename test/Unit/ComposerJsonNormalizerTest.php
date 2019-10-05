@@ -25,6 +25,13 @@ use Localheinz\Json\Normalizer\SchemaNormalizer;
 
 /**
  * @internal
+ *
+ * @covers \Localheinz\Composer\Json\Normalizer\ComposerJsonNormalizer
+ *
+ * @uses \Localheinz\Composer\Json\Normalizer\BinNormalizer
+ * @uses \Localheinz\Composer\Json\Normalizer\ConfigHashNormalizer
+ * @uses \Localheinz\Composer\Json\Normalizer\PackageHashNormalizer
+ * @uses \Localheinz\Composer\Json\Normalizer\VersionConstraintNormalizer
  */
 final class ComposerJsonNormalizerTest extends AbstractNormalizerTestCase
 {
@@ -56,7 +63,7 @@ final class ComposerJsonNormalizerTest extends AbstractNormalizerTestCase
     public function testNormalizeNormalizes(): void
     {
         $json = Json::fromEncoded(
-<<<'JSON'
+            <<<'JSON'
 {
   "name": "foo/bar",
   "description": "In der Fantasie geht alles",
@@ -128,7 +135,7 @@ JSON
         );
 
         $expected = Json::fromEncoded(
-<<<'JSON'
+            <<<'JSON'
 {
   "name": "foo/bar",
   "type": "library",
