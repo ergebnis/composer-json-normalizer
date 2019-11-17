@@ -49,7 +49,7 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
         self::assertSame($json->encoded(), $normalized->encoded());
     }
 
-    public function providerJsonNotDecodingToObject(): \Generator
+    final public function providerJsonNotDecodingToObject(): \Generator
     {
         $faker = $this->faker();
 

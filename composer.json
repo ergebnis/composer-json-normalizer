@@ -20,14 +20,15 @@
     "localheinz/json-normalizer": "~0.9.0"
   },
   "require-dev": {
-    "infection/infection": "~0.11.4",
-    "localheinz/php-cs-fixer-config": "~1.23.0",
-    "localheinz/phpstan-rules": "~0.5.0",
+    "infection/infection": "~0.13.6",
+    "jangregor/phpstan-prophecy": "~0.4.2",
+    "localheinz/php-cs-fixer-config": "~1.24.0",
+    "localheinz/phpstan-rules": "~0.13.0",
     "localheinz/test-util": "~0.7.0",
-    "phpstan/phpstan": "~0.10.7",
-    "phpstan/phpstan-deprecation-rules": "~0.10.2",
-    "phpstan/phpstan-strict-rules": "~0.10.1",
-    "phpunit/phpunit": "^7.5.1"
+    "phpstan/phpstan": "~0.11.19",
+    "phpstan/phpstan-deprecation-rules": "~0.11.2",
+    "phpstan/phpstan-strict-rules": "~0.11.1",
+    "phpunit/phpunit": "^7.5.17"
   },
   "config": {
     "preferred-install": "dist",
