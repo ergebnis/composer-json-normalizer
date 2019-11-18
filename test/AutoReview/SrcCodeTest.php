@@ -27,7 +27,7 @@ final class SrcCodeTest extends Framework\TestCase
 
     public function testSrcClassesHaveUnitTests(): void
     {
-        $this->assertClassesHaveTests(
+        self::assertClassesHaveTests(
             __DIR__ . '/../../src',
             'Localheinz\\Composer\\Json\\Normalizer\\',
             'Localheinz\\Composer\\Json\\Normalizer\\Test\\Unit\\'

@@ -27,7 +27,7 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
 
     final public function testImplementsNormalizerInterface(): void
     {
-        $this->assertClassImplementsInterface(NormalizerInterface::class, $this->className());
+        self::assertClassImplementsInterface(NormalizerInterface::class, $this->className());
     }
 
     /**
@@ -51,7 +51,7 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
 
     final public function providerJsonNotDecodingToObject(): \Generator
     {
-        $faker = $this->faker();
+        $faker = self::faker();
 
         $values = [
             'array' => $faker->words,

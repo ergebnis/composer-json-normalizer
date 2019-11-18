@@ -218,8 +218,8 @@ JSON
 
     private function assertComposesNormalizer(string $className, NormalizerInterface $normalizer): void
     {
-        $this->assertClassExists($className);
-        $this->assertClassImplementsInterface(NormalizerInterface::class, $className);
+        self::assertClassExists($className);
+        self::assertClassImplementsInterface(NormalizerInterface::class, $className);
 
         $attributeName = 'normalizer';
 
@@ -239,8 +239,8 @@ JSON
     private function assertComposesNormalizers(array $classNames, NormalizerInterface $normalizer): void
     {
         foreach ($classNames as $className) {
-            $this->assertClassExists($className);
-            $this->assertClassImplementsInterface(NormalizerInterface::class, $className);
+            self::assertClassExists($className);
+            self::assertClassImplementsInterface(NormalizerInterface::class, $className);
         }
 
         $attributeName = 'normalizers';
