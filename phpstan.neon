@@ -1,13 +1,14 @@
 includes:
-	- vendor/localheinz/phpstan-rules/rules.neon
+	- vendor/ergebnis/phpstan-rules/rules.neon
 	- vendor/phpstan/phpstan-deprecation-rules/rules.neon
 	- vendor/phpstan/phpstan-strict-rules/rules.neon
 	- vendor/phpstan/phpstan/conf/bleedingEdge.neon
 	- vendor/phpstan/phpstan/conf/config.levelmax.neon
 
 parameters:
-	classesAllowedToBeExtended:
-		- Localheinz\Composer\Json\Normalizer\Test\Unit\AbstractNormalizerTestCase
+	ergebnis:
+		classesAllowedToBeExtended:
+			- Localheinz\Composer\Json\Normalizer\Test\Unit\AbstractNormalizerTestCase
 	ignoreErrors:
 		- '#Constructor in Localheinz\\Composer\\Json\\Normalizer\\ComposerJsonNormalizer has parameter \$schemaUri with default value.#'
 	inferPrivatePropertyTypeFromConstructor: true
