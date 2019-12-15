@@ -5,14 +5,8 @@ version: 1
 update_configs:
   - default_assignees:
       - "localheinz"
-    default_reviewers:
-      - "localheinz"
-    directory: "/"
-    package_manager: "github_actions"
-    update_schedule: "daily"
-
-  - default_assignees:
-      - "localheinz"
+    default_labels:
+      - "dependency"
     default_reviewers:
       - "localheinz"
     directory: "/"

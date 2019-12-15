@@ -1,0 +1,10 @@
+
+
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Constructor in Localheinz\\\\Composer\\\\Json\\\\Normalizer\\\\ComposerJsonNormalizer has parameter \\$schemaUri with default value\\.$#"
+			count: 1
+			path: src/ComposerJsonNormalizer.php
+
+
