@@ -8,30 +8,30 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @see https://github.com/localheinz/composer-json-normalizer
+ * @see https://github.com/ergebnis/composer-json-normalizer
  */
 
-namespace Localheinz\Composer\Json\Normalizer\Test\Unit;
+namespace Ergebnis\Composer\Json\Normalizer\Test\Unit;
 
+use Ergebnis\Composer\Json\Normalizer\BinNormalizer;
+use Ergebnis\Composer\Json\Normalizer\ComposerJsonNormalizer;
+use Ergebnis\Composer\Json\Normalizer\ConfigHashNormalizer;
+use Ergebnis\Composer\Json\Normalizer\PackageHashNormalizer;
+use Ergebnis\Composer\Json\Normalizer\VersionConstraintNormalizer;
 use Ergebnis\Json\Normalizer\ChainNormalizer;
 use Ergebnis\Json\Normalizer\Json;
 use Ergebnis\Json\Normalizer\NormalizerInterface;
 use Ergebnis\Json\Normalizer\SchemaNormalizer;
-use Localheinz\Composer\Json\Normalizer\BinNormalizer;
-use Localheinz\Composer\Json\Normalizer\ComposerJsonNormalizer;
-use Localheinz\Composer\Json\Normalizer\ConfigHashNormalizer;
-use Localheinz\Composer\Json\Normalizer\PackageHashNormalizer;
-use Localheinz\Composer\Json\Normalizer\VersionConstraintNormalizer;
 
 /**
  * @internal
  *
- * @covers \Localheinz\Composer\Json\Normalizer\ComposerJsonNormalizer
+ * @covers \Ergebnis\Composer\Json\Normalizer\ComposerJsonNormalizer
  *
- * @uses \Localheinz\Composer\Json\Normalizer\BinNormalizer
- * @uses \Localheinz\Composer\Json\Normalizer\ConfigHashNormalizer
- * @uses \Localheinz\Composer\Json\Normalizer\PackageHashNormalizer
- * @uses \Localheinz\Composer\Json\Normalizer\VersionConstraintNormalizer
+ * @uses \Ergebnis\Composer\Json\Normalizer\BinNormalizer
+ * @uses \Ergebnis\Composer\Json\Normalizer\ConfigHashNormalizer
+ * @uses \Ergebnis\Composer\Json\Normalizer\PackageHashNormalizer
+ * @uses \Ergebnis\Composer\Json\Normalizer\VersionConstraintNormalizer
  */
 final class ComposerJsonNormalizerTest extends AbstractNormalizerTestCase
 {

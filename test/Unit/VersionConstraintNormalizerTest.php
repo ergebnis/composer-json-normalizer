@@ -8,18 +8,18 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @see https://github.com/localheinz/composer-json-normalizer
+ * @see https://github.com/ergebnis/composer-json-normalizer
  */
 
-namespace Localheinz\Composer\Json\Normalizer\Test\Unit;
+namespace Ergebnis\Composer\Json\Normalizer\Test\Unit;
 
+use Ergebnis\Composer\Json\Normalizer\VersionConstraintNormalizer;
 use Ergebnis\Json\Normalizer\Json;
-use Localheinz\Composer\Json\Normalizer\VersionConstraintNormalizer;
 
 /**
  * @internal
  *
- * @covers \Localheinz\Composer\Json\Normalizer\VersionConstraintNormalizer
+ * @covers \Ergebnis\Composer\Json\Normalizer\VersionConstraintNormalizer
  */
 final class VersionConstraintNormalizerTest extends AbstractNormalizerTestCase
 {

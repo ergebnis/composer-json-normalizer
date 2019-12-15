@@ -8,10 +8,10 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @see https://github.com/localheinz/composer-json-normalizer
+ * @see https://github.com/ergebnis/composer-json-normalizer
  */
 
-namespace Localheinz\Composer\Json\Normalizer\Test\AutoReview;
+namespace Ergebnis\Composer\Json\Normalizer\Test\AutoReview;
 
 use Ergebnis\Test\Util\Helper;
 use PHPUnit\Framework;
