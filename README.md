@@ -26,7 +26,7 @@ and use it to normalize the contents of a `composer.json`:
 use Ergebnis\Composer\Json\Normalizer\ComposerJsonNormalizer;
 use Ergebnis\Json\Normalizer\Json;
 
-$normalizer = new ComposerJsonNormalizer();
+$normalizer = new ComposerJsonNormalizer('https://getcomposer.org/schema.json');
 
 $json = Json::fromEncoded(file_get_contents(__DIR__ . '/composer.json'));
 

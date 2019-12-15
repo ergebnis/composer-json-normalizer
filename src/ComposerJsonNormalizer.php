@@ -24,7 +24,7 @@ final class ComposerJsonNormalizer implements Normalizer\NormalizerInterface
      */
     private $normalizer;
 
-    public function __construct(string $schemaUri = 'https://getcomposer.org/schema.json')
+    public function __construct(string $schemaUri)
     {
         $this->normalizer = new Normalizer\ChainNormalizer(
             new Normalizer\SchemaNormalizer(

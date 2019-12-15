@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`1.0.2...master`][1.0.2...master].
+For a full diff see [`2.0.0...master`][2.0.0...master].
+
+## [`2.0.0`][2.0.0]
+
+For a full diff see [`1.0.2...2.0.0`][1.0.2...2.0.0].
 
 ### Changed
 
@@ -43,6 +47,8 @@ For a full diff see [`1.0.2...master`][1.0.2...master].
 
   to delete backup files created in the previous step.
 
+* Removed default value for `$schemaUri` parameter from constructor of `Ergebnis\Composer\Json\Normalizer\ComposerJsonNormalizer` ([#47]), by [@localheinz]
+
 ### Fixed
 
 * Dropped support for PHP 7.1 ([#30]), by [@localheinz]
@@ -76,11 +82,13 @@ For a full diff see [`149a393...1.0.0`][149a393...1.0.0].
 [1.0.0]: https://github.com/ergebnis/composer-json-normalizer/releases/tag/1.0.0
 [1.0.1]: https://github.com/ergebnis/composer-json-normalizer/releases/tag/1.0.1
 [1.0.2]: https://github.com/ergebnis/composer-json-normalizer/releases/tag/1.0.2
+[2.0.0]: https://github.com/ergebnis/composer-json-normalizer/releases/tag/2.0.0
 
 [149a393...1.0.0]: https://github.com/ergebnis/composer-json-normalizer/compare/149a393...1.0.0
 [1.0.0...1.0.1]: https://github.com/ergebnis/composer-json-normalizer/compare/1.0.0...1.0.1
 [1.0.1...1.0.2]: https://github.com/ergebnis/composer-json-normalizer/compare/1.0.1...1.0.2
-[1.0.2...master]: https://github.com/ergebnis/composer-json-normalizer/compare/1.0.2...master
+[1.0.2...2.0.0]: https://github.com/ergebnis/composer-json-normalizer/compare/1.0.2...2.0.0
+[2.0.0...master]: https://github.com/ergebnis/composer-json-normalizer/compare/2.0.0...master
 
 [#1]: https://github.com/ergebnis/composer-json-normalizer/pull/1
 [#2]: https://github.com/ergebnis/composer-json-normalizer/pull/2
@@ -89,6 +97,7 @@ For a full diff see [`149a393...1.0.0`][149a393...1.0.0].
 [#41]: https://github.com/ergebnis/composer-json-normalizer/pull/41
 [#44]: https://github.com/ergebnis/composer-json-normalizer/pull/44
 [#45]: https://github.com/ergebnis/composer-json-normalizer/pull/45
+[#47]: https://github.com/ergebnis/composer-json-normalizer/pull/47
 
 [@ergebnis]: https://github.com/ergebnis
 [@localheinz]: https://github.com/localheinz

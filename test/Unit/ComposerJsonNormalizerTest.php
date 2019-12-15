@@ -37,7 +37,7 @@ final class ComposerJsonNormalizerTest extends AbstractNormalizerTestCase
 {
     public function testComposesNormalizers(): void
     {
-        $normalizer = new ComposerJsonNormalizer();
+        $normalizer = new ComposerJsonNormalizer('https://getcomposer.org/schema.json');
 
         $this->assertComposesNormalizer(ChainNormalizer::class, $normalizer);
 
