@@ -16,6 +16,7 @@ For a full diff see [`1.0.2...master`][1.0.2...master].
 
 * Dropped support for PHP 7.1 ([#30]), by [@localheinz]
 * Required implicit dependency `ext-json` explicitly ([#41]), by [@localheinz]
+* Required implicit dependency `justinrainbow/json-schema` explicitly ([#44]), by [@localheinz]
 
 ## [`1.0.2`][1.0.2]
 

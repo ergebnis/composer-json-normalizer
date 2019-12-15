@@ -18,7 +18,8 @@
   "require": {
     "php": "^7.2",
     "ext-json": "*",
-    "ergebnis/json-normalizer": "~0.10.0"
+    "ergebnis/json-normalizer": "~0.10.0",
+    "justinrainbow/json-schema": "^4.0.0 || ^5.0.0"
   },
   "require-dev": {
     "ergebnis/php-cs-fixer-config": "~1.1.1",
