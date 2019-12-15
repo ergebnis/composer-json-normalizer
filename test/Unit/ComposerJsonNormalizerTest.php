@@ -13,15 +13,15 @@ declare(strict_types=1);
 
 namespace Localheinz\Composer\Json\Normalizer\Test\Unit;
 
+use Ergebnis\Json\Normalizer\ChainNormalizer;
+use Ergebnis\Json\Normalizer\Json;
+use Ergebnis\Json\Normalizer\NormalizerInterface;
+use Ergebnis\Json\Normalizer\SchemaNormalizer;
 use Localheinz\Composer\Json\Normalizer\BinNormalizer;
 use Localheinz\Composer\Json\Normalizer\ComposerJsonNormalizer;
 use Localheinz\Composer\Json\Normalizer\ConfigHashNormalizer;
 use Localheinz\Composer\Json\Normalizer\PackageHashNormalizer;
 use Localheinz\Composer\Json\Normalizer\VersionConstraintNormalizer;
-use Localheinz\Json\Normalizer\ChainNormalizer;
-use Localheinz\Json\Normalizer\Json;
-use Localheinz\Json\Normalizer\NormalizerInterface;
-use Localheinz\Json\Normalizer\SchemaNormalizer;
 
 /**
  * @internal

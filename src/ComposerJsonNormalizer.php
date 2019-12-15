@@ -13,22 +13,25 @@ declare(strict_types=1);
 
 namespace Localheinz\Composer\Json\Normalizer;
 
-use Localheinz\Json\Normalizer\ChainNormalizer;
-use Localheinz\Json\Normalizer\Json;
-use Localheinz\Json\Normalizer\NormalizerInterface;
-use Localheinz\Json\Normalizer\SchemaNormalizer;
+use Ergebnis\Json\Normalizer;
+use JsonSchema\SchemaStorage;
+use JsonSchema\Validator;
 
-final class ComposerJsonNormalizer implements NormalizerInterface
+final class ComposerJsonNormalizer implements Normalizer\NormalizerInterface
 {
     /**
-     * @var NormalizerInterface
+     * @var Normalizer\NormalizerInterface
      */
     private $normalizer;
 
     public function __construct(string $schemaUri = 'https://getcomposer.org/schema.json')
     {
-        $this->normalizer = new ChainNormalizer(
-            new SchemaNormalizer($schemaUri),
+        $this->normalizer = new Normalizer\ChainNormalizer(
+            new Normalizer\SchemaNormalizer(
+                $schemaUri,
+                new SchemaStorage(),
+                new Normalizer\Validator\SchemaValidator(new Validator())
+            ),
             new BinNormalizer(),
             new ConfigHashNormalizer(),
             new PackageHashNormalizer(),
@@ -36,7 +39,7 @@ final class ComposerJsonNormalizer implements NormalizerInterface
         );
     }
 
-    public function normalize(Json $json): Json
+    public function normalize(Normalizer\Json $json): Normalizer\Json
     {
         if (!\is_object($json->decoded())) {
             return $json;
