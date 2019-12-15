@@ -11,6 +11,7 @@ For a full diff see [`1.0.2...master`][1.0.2...master].
 ### Fixed
 
 * Dropped support for PHP 7.1 ([#30]), by [@localheinz]
+* Required implicit dependency `ext-json` explicitly ([#41]), by [@localheinz]
 
 ## [`1.0.2`][1.0.2]
 
@@ -49,5 +50,6 @@ For a full diff see [`149a393...1.0.0`][149a393...1.0.0].
 [#2]: https://github.com/localheinz/composer-json-normalizer/pull/2
 [#21]: https://github.com/localheinz/composer-json-normalizer/pull/21
 [#30]: https://github.com/localheinz/composer-json-normalizer/pull/30
+[#41]: https://github.com/localheinz/composer-json-normalizer/pull/41
 
 [@localheinz]: https://github.com/localheinz
