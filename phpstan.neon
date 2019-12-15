@@ -4,7 +4,7 @@ includes:
 parameters:
 	ergebnis:
 		classesAllowedToBeExtended:
-			- Localheinz\Composer\Json\Normalizer\Test\Unit\AbstractNormalizerTestCase
+			- Ergebnis\Composer\Json\Normalizer\Test\Unit\AbstractNormalizerTestCase
 	inferPrivatePropertyTypeFromConstructor: true
 	level: max
 	paths:

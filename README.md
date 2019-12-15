@@ -1,9 +1,9 @@
 # composer-json-normalizer
 
-[![Continuous Integration](https://github.com/localheinz/composer-json-normalizer/workflows/Continuous%20Integration/badge.svg)](https://github.com/localheinz/composer-json-normalizer/actions)
-[![Code Coverage](https://codecov.io/gh/localheinz/composer-json-normalizer/branch/master/graph/badge.svg)](https://codecov.io/gh/localheinz/composer-json-normalizer)
-[![Latest Stable Version](https://poser.pugx.org/localheinz/composer-json-normalizer/v/stable)](https://packagist.org/packages/localheinz/composer-json-normalizer)
-[![Total Downloads](https://poser.pugx.org/localheinz/composer-json-normalizer/downloads)](https://packagist.org/packages/localheinz/composer-json-normalizer)
+[![Continuous Integration](https://github.com/ergebnis/composer-json-normalizer/workflows/Continuous%20Integration/badge.svg)](https://github.com/ergebnis/composer-json-normalizer/actions)
+[![Code Coverage](https://codecov.io/gh/ergebnis/composer-json-normalizer/branch/master/graph/badge.svg)](https://codecov.io/gh/ergebnis/composer-json-normalizer)
+[![Latest Stable Version](https://poser.pugx.org/ergebnis/composer-json-normalizer/v/stable)](https://packagist.org/packages/ergebnis/composer-json-normalizer)
+[![Total Downloads](https://poser.pugx.org/ergebnis/composer-json-normalizer/downloads)](https://packagist.org/packages/ergebnis/composer-json-normalizer)
 
 Provides normalizers for normalizing [`composer.json`](https://getcomposer.org/doc/04-schema.md).
 
@@ -12,19 +12,19 @@ Provides normalizers for normalizing [`composer.json`](https://getcomposer.org/d
 Run
 
 ```
-$ composer require localheinz/composer-json-normalizer
+$ composer require ergebnis/composer-json-normalizer
 ```
 
 ## Usage
 
-Create an instance of `Localheinz\Composer\Json\Normalizer\ComposerJsonNormalizer`
+Create an instance of `Ergebnis\Composer\Json\Normalizer\ComposerJsonNormalizer`
 and use it to normalize the contents of a `composer.json`:
 
 ```php
 <?php
 
+use Ergebnis\Composer\Json\Normalizer\ComposerJsonNormalizer;
 use Ergebnis\Json\Normalizer\Json;
-use Localheinz\Composer\Json\Normalizer\ComposerJsonNormalizer;
 
 $normalizer = new ComposerJsonNormalizer();
 
@@ -46,10 +46,10 @@ The `ComposerJsonNormalizer` composes normalizers provided by [`localheinz/json-
 
 as well as the following normalizers provided by this package:
 
-* [`Localheinz\Composer\Json\Normalizer\BinNormalizer`](#binnormalizer)
-* [`Localheinz\Composer\Json\Normalizer\ConfigHashNormalizer`](#confighashnormalizer)
-* [`Localheinz\Composer\Json\Normalizer\PackageHashNormalizer`](#packagehashnormalizer)
-* [`Localheinz\Composer\Json\Normalizer\VersionConstraintNormalizer`](#versionconstraintnormalizer)
+* [`Ergebnis\Composer\Json\Normalizer\BinNormalizer`](#binnormalizer)
+* [`Ergebnis\Composer\Json\Normalizer\ConfigHashNormalizer`](#confighashnormalizer)
+* [`Ergebnis\Composer\Json\Normalizer\PackageHashNormalizer`](#packagehashnormalizer)
+* [`Ergebnis\Composer\Json\Normalizer\VersionConstraintNormalizer`](#versionconstraintnormalizer)
 
 ### `BinNormalizer`
 

@@ -1,5 +1,5 @@
 {
-  "name": "localheinz/composer-json-normalizer",
+  "name": "ergebnis/composer-json-normalizer",
   "type": "library",
   "description": "Provides normalizers for normalizing composer.json.",
   "keywords": [
@@ -7,7 +7,7 @@
     "json",
     "normalizer"
   ],
-  "homepage": "https://github.com/localheinz/composer-json-normalizer",
+  "homepage": "https://github.com/ergebnis/composer-json-normalizer",
   "license": "MIT",
   "authors": [
     {
@@ -39,16 +39,16 @@
   },
   "autoload": {
     "psr-4": {
-      "Localheinz\\Composer\\Json\\Normalizer\\": "src/"
+      "Ergebnis\\Composer\\Json\\Normalizer\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Localheinz\\Composer\\Json\\Normalizer\\Test\\": "test/"
+      "Ergebnis\\Composer\\Json\\Normalizer\\Test\\": "test/"
     }
   },
   "support": {
-    "issues": "https://github.com/localheinz/composer-json-normalizer/issues",
-    "source": "https://github.com/localheinz/composer-json-normalizer"
+    "issues": "https://github.com/ergebnis/composer-json-normalizer/issues",
+    "source": "https://github.com/ergebnis/composer-json-normalizer"
   }
 }
