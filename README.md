@@ -1,7 +1,7 @@
 # composer-json-normalizer
 
 [![Continuous Integration](https://github.com/localheinz/composer-json-normalizer/workflows/Continuous%20Integration/badge.svg)](https://github.com/localheinz/composer-json-normalizer/actions)
-[![codecov](https://codecov.io/gh/localheinz/composer-json-normalizer/branch/master/graph/badge.svg)](https://codecov.io/gh/localheinz/composer-json-normalizer)
+[![Code Coverage](https://codecov.io/gh/localheinz/composer-json-normalizer/branch/master/graph/badge.svg)](https://codecov.io/gh/localheinz/composer-json-normalizer)
 [![Latest Stable Version](https://poser.pugx.org/localheinz/composer-json-normalizer/v/stable)](https://packagist.org/packages/localheinz/composer-json-normalizer)
 [![Total Downloads](https://poser.pugx.org/localheinz/composer-json-normalizer/downloads)](https://packagist.org/packages/localheinz/composer-json-normalizer)
 
