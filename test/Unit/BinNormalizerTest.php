@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Localheinz\Composer\Json\Normalizer\Test\Unit;
 
+use Ergebnis\Json\Normalizer\Json;
 use Localheinz\Composer\Json\Normalizer\BinNormalizer;
-use Localheinz\Json\Normalizer\Json;
 
 /**
  * @internal
@@ -76,7 +76,7 @@ JSON
   "foo": {
     "qux": "quux",
     "bar": "baz"
-  }  
+  }
 }
 JSON
         );

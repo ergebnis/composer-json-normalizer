@@ -23,8 +23,8 @@ and use it to normalize the contents of a `composer.json`:
 ```php
 <?php
 
+use Ergebnis\Json\Normalizer\Json;
 use Localheinz\Composer\Json\Normalizer\ComposerJsonNormalizer;
-use Localheinz\Json\Normalizer\Json;
 
 $normalizer = new ComposerJsonNormalizer();
 
@@ -41,8 +41,8 @@ echo $normalized->encoded();
 
 The `ComposerJsonNormalizer` composes normalizers provided by [`localheinz/json-normalizer`](https://github.com/localheinz/json-normalizer):
 
-* [`Localheinz\Json\Normalizer\ChainNormalizer`](https://github.com/localheinz/json-normalizer#chainnormalizer)
-* [`Localheinz\Json\Normalizer\SchemaNormalizer`](https://github.com/localheinz/json-normalizer#schemanormalizer)
+* [`Ergebnis\Json\Normalizer\ChainNormalizer`](https://github.com/localheinz/json-normalizer#chainnormalizer)
+* [`Ergebnis\Json\Normalizer\SchemaNormalizer`](https://github.com/localheinz/json-normalizer#schemanormalizer)
 
 as well as the following normalizers provided by this package:
 

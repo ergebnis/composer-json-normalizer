@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Localheinz\Composer\Json\Normalizer;
 
-use Localheinz\Json\Normalizer\Json;
-use Localheinz\Json\Normalizer\NormalizerInterface;
+use Ergebnis\Json\Normalizer\Json;
+use Ergebnis\Json\Normalizer\NormalizerInterface;
 
 final class ConfigHashNormalizer implements NormalizerInterface
 {
