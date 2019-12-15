@@ -1,10 +1,6 @@
 
 
 parameters:
-	ignoreErrors:
-		-
-			message: "#^Constructor in Ergebnis\\\\Composer\\\\Json\\\\Normalizer\\\\ComposerJsonNormalizer has parameter \\$schemaUri with default value\\.$#"
-			count: 1
-			path: src/ComposerJsonNormalizer.php
+	ignoreErrors: []
 
 
