@@ -6,7 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`2.0.0...master`][2.0.0...master].
+For a full diff see [`2.0.1...master`][2.0.1...master].
+
+## [`2.0.1`][2.0.1]
+
+For a full diff see [`2.0.0...2.0.1`][2.0.0...2.0.1].
+
+### Fixed
+
+* Brought back support for PHP 7.1 ([#53]), by [@localheinz]
 
 ## [`2.0.0`][2.0.0]
 
@@ -83,12 +91,14 @@ For a full diff see [`149a393...1.0.0`][149a393...1.0.0].
 [1.0.1]: https://github.com/ergebnis/composer-json-normalizer/releases/tag/1.0.1
 [1.0.2]: https://github.com/ergebnis/composer-json-normalizer/releases/tag/1.0.2
 [2.0.0]: https://github.com/ergebnis/composer-json-normalizer/releases/tag/2.0.0
+[2.0.1]: https://github.com/ergebnis/composer-json-normalizer/releases/tag/2.0.1
 
 [149a393...1.0.0]: https://github.com/ergebnis/composer-json-normalizer/compare/149a393...1.0.0
 [1.0.0...1.0.1]: https://github.com/ergebnis/composer-json-normalizer/compare/1.0.0...1.0.1
 [1.0.1...1.0.2]: https://github.com/ergebnis/composer-json-normalizer/compare/1.0.1...1.0.2
 [1.0.2...2.0.0]: https://github.com/ergebnis/composer-json-normalizer/compare/1.0.2...2.0.0
-[2.0.0...master]: https://github.com/ergebnis/composer-json-normalizer/compare/2.0.0...master
+[2.0.0...2.0.1]: https://github.com/ergebnis/composer-json-normalizer/compare/2.0.0...2.0.1
+[2.0.1...master]: https://github.com/ergebnis/composer-json-normalizer/compare/2.0.1...master
 
 [#1]: https://github.com/ergebnis/composer-json-normalizer/pull/1
 [#2]: https://github.com/ergebnis/composer-json-normalizer/pull/2
@@ -98,6 +108,7 @@ For a full diff see [`149a393...1.0.0`][149a393...1.0.0].
 [#44]: https://github.com/ergebnis/composer-json-normalizer/pull/44
 [#45]: https://github.com/ergebnis/composer-json-normalizer/pull/45
 [#47]: https://github.com/ergebnis/composer-json-normalizer/pull/47
+[#53]: https://github.com/ergebnis/composer-json-normalizer/pull/53
 
 [@ergebnis]: https://github.com/ergebnis
 [@localheinz]: https://github.com/localheinz
