@@ -4,32 +4,32 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec5e30081604677d2b9f62157c7a46df",
+    "content-hash": "a786bdebc03e7483a9e75bc7b29827a4",
     "packages": [
         {
             "name": "ergebnis/json-normalizer",
-            "version": "0.10.0",
+            "version": "0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/json-normalizer.git",
-                "reference": "a489b84d68f0e8a8c882a849550312a6e0c9b7f0"
+                "reference": "0948169c680527940928d166b447a044b9c9e71e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-normalizer/zipball/a489b84d68f0e8a8c882a849550312a6e0c9b7f0",
-                "reference": "a489b84d68f0e8a8c882a849550312a6e0c9b7f0",
+                "url": "https://api.github.com/repos/ergebnis/json-normalizer/zipball/0948169c680527940928d166b447a044b9c9e71e",
+                "reference": "0948169c680527940928d166b447a044b9c9e71e",
                 "shasum": ""
             },
             "require": {
-                "ergebnis/json-printer": "^3.0.1",
+                "ergebnis/json-printer": "^3.0.2",
                 "ext-json": "*",
                 "justinrainbow/json-schema": "^4.0.0 || ^5.0.0",
-                "php": "^7.2"
+                "php": "^7.1"
             },
             "require-dev": {
-                "ergebnis/php-cs-fixer-config": "~1.1.1",
-                "ergebnis/phpstan-rules": "~0.14.1",
-                "ergebnis/test-util": "~0.9.0",
+                "ergebnis/php-cs-fixer-config": "~1.1.2",
+                "ergebnis/phpstan-rules": "~0.14.2",
+                "ergebnis/test-util": "~0.9.1",
                 "infection/infection": "~0.13.6",
                 "jangregor/phpstan-prophecy": "~0.4.2",
                 "phpbench/phpbench": "~0.16.10",
@@ -37,7 +37,7 @@
                 "phpstan/phpstan": "~0.11.19",
                 "phpstan/phpstan-deprecation-rules": "~0.11.2",
                 "phpstan/phpstan-strict-rules": "~0.11.1",
-                "phpunit/phpunit": "^8.5.0"
+                "phpunit/phpunit": "^7.5.18"
             },
             "type": "library",
             "autoload": {
@@ -61,30 +61,30 @@
                 "json",
                 "normalizer"
             ],
-            "time": "2019-12-15T11:48:50+00:00"
+            "time": "2019-12-19T16:36:22+00:00"
         },
         {
             "name": "ergebnis/json-printer",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/json-printer.git",
-                "reference": "182fe2f4223e40ba4f1ca2ccdb35e2dd8c1e0878"
+                "reference": "c7985dc4879777f2e4ab689da25bdd49f59dd2cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-printer/zipball/182fe2f4223e40ba4f1ca2ccdb35e2dd8c1e0878",
-                "reference": "182fe2f4223e40ba4f1ca2ccdb35e2dd8c1e0878",
+                "url": "https://api.github.com/repos/ergebnis/json-printer/zipball/c7985dc4879777f2e4ab689da25bdd49f59dd2cb",
+                "reference": "c7985dc4879777f2e4ab689da25bdd49f59dd2cb",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": "^7.2"
+                "php": "^7.1"
             },
             "require-dev": {
-                "ergebnis/php-cs-fixer-config": "~1.1.0",
-                "ergebnis/phpstan-rules": "~0.14.0",
+                "ergebnis/php-cs-fixer-config": "~1.1.1",
+                "ergebnis/phpstan-rules": "~0.14.1",
                 "ergebnis/test-util": "~0.9.0",
                 "infection/infection": "~0.13.6",
                 "phpbench/phpbench": "~0.16.10",
@@ -92,7 +92,7 @@
                 "phpstan/phpstan": "~0.11.19",
                 "phpstan/phpstan-deprecation-rules": "~0.11.2",
                 "phpstan/phpstan-strict-rules": "~0.11.1",
-                "phpunit/phpunit": "^8.5.0"
+                "phpunit/phpunit": "^7.5.18"
             },
             "type": "library",
             "autoload": {
@@ -117,7 +117,7 @@
                 "json",
                 "printer"
             ],
-            "time": "2019-12-15T09:53:05+00:00"
+            "time": "2019-12-19T14:42:54+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
