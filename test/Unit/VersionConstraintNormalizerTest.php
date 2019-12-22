@@ -47,6 +47,9 @@ JSON
         self::assertSame($json->encoded(), $normalized->encoded());
     }
 
+    /**
+     * @return \Generator<array<string>>
+     */
     public function providerVersionConstraint(): \Generator
     {
         foreach (\array_keys($this->versionConstraints()) as $versionConstraint) {
@@ -78,6 +81,9 @@ JSON
         self::assertSame(\json_encode(\json_decode($json->encoded())), $normalized->encoded());
     }
 
+    /**
+     * @return \Generator<array<string>>
+     */
     public function providerProperty(): \Generator
     {
         $properties = $this->propertiesWhereValuesOfHashAreVersionConstraints();
@@ -125,6 +131,9 @@ JSON
         self::assertJsonStringEqualsJsonString($expected->encoded(), $normalized->encoded());
     }
 
+    /**
+     * @return \Generator<array<string>>
+     */
     public function providerPropertyAndVersionConstraint(): \Generator
     {
         $properties = $this->propertiesWhereValuesOfHashAreVersionConstraints();
@@ -177,6 +186,9 @@ JSON
         self::assertJsonStringEqualsJsonString($expected->encoded(), $normalized->encoded());
     }
 
+    /**
+     * @return \Generator<array<string>>
+     */
     public function providerPropertyAndUntrimmedVersionConstraint(): \Generator
     {
         $spaces = [
@@ -208,6 +220,9 @@ JSON
         }
     }
 
+    /**
+     * @return string[]
+     */
     private function propertiesWhereValuesOfHashAreVersionConstraints(): array
     {
         return [
@@ -222,7 +237,7 @@ JSON
     /**
      * @see https://getcomposer.org/doc/articles/versions.md
      *
-     * @return array
+     * @return string[]
      */
     private function versionConstraints(): array
     {

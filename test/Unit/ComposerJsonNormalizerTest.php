@@ -236,6 +236,12 @@ JSON
         ));
     }
 
+    /**
+     * @param string[]            $classNames
+     * @param NormalizerInterface $normalizer
+     *
+     * @throws \ReflectionException
+     */
     private function assertComposesNormalizers(array $classNames, NormalizerInterface $normalizer): void
     {
         foreach ($classNames as $className) {
@@ -252,7 +258,7 @@ JSON
 
         $composedNormalizers = $this->composedNormalizers($normalizer);
 
-        $composedNormalizerClassNames = \array_map(static function ($normalizer) {
+        $composedNormalizerClassNames = \array_map(static function ($normalizer): string {
             return \get_class($normalizer);
         }, $composedNormalizers);
 
@@ -274,6 +280,13 @@ JSON
         return $property->getValue($normalizer);
     }
 
+    /**
+     * @param NormalizerInterface $normalizer
+     *
+     * @throws \ReflectionException
+     *
+     * @return NormalizerInterface[]
+     */
     private function composedNormalizers(NormalizerInterface $normalizer): array
     {
         $reflection = new \ReflectionObject($normalizer);

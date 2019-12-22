@@ -30,7 +30,7 @@ final class VersionConstraintNormalizer implements NormalizerInterface
     ];
 
     /**
-     * @var array
+     * @var array<string, array<string>>
      */
     private static $map = [
         'and' => [
@@ -71,7 +71,7 @@ final class VersionConstraintNormalizer implements NormalizerInterface
                 continue;
             }
 
-            $decoded->{$name} = \array_map(function (string $versionConstraint) {
+            $decoded->{$name} = \array_map(function (string $versionConstraint): string {
                 return $this->normalizeVersionConstraint($versionConstraint);
             }, $packages);
         }

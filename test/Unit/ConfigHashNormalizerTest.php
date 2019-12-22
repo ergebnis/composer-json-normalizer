@@ -109,6 +109,9 @@ JSON
         self::assertSame(\json_encode(\json_decode($expected->encoded())), $normalized->encoded());
     }
 
+    /**
+     * @return \Generator<array<string>>
+     */
     public function providerProperty(): \Generator
     {
         foreach ($this->properties() as $value) {
@@ -118,6 +121,9 @@ JSON
         }
     }
 
+    /**
+     * @return string[]
+     */
     private function properties(): array
     {
         return [
