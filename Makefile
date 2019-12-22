@@ -1,3 +1,6 @@
+MIN_COVERED_MSI:=94
+MIN_MSI:=94
+
 .PHONY: it
 it: coding-standards dependency-analysis static-code-analysis tests ## Runs the coding-standards, dependency-analysis, static-code-analysis, and tests targets
 
@@ -23,7 +26,7 @@ help: ## Displays this list of targets with descriptions
 .PHONY: mutation-tests
 mutation-tests: vendor ## Runs mutation tests with infection/infection
 	mkdir -p .build/infection
-	vendor/bin/infection --ignore-msi-with-no-mutations --min-covered-msi=94 --min-msi=94
+	vendor/bin/infection --ignore-msi-with-no-mutations --min-covered-msi=${MIN_COVERED_MSI} --min-msi=${MIN_MSI}
 
 .PHONY: static-code-analysis
 static-code-analysis: vendor ## Runs a static code analysis with phpstan/phpstan
