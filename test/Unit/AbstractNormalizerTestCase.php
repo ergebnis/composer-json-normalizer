@@ -49,6 +49,9 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
         self::assertSame($json->encoded(), $normalized->encoded());
     }
 
+    /**
+     * @return \Generator<array<string>>
+     */
     final public function providerJsonNotDecodingToObject(): \Generator
     {
         $faker = self::faker();
@@ -64,8 +67,14 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
         ];
 
         foreach ($values as $key => $value) {
+            $encoded = \json_encode($value);
+
+            if (!\is_string($encoded)) {
+                throw new \RuntimeException('Failed encoding a value to JSON.');
+            }
+
             yield $key => [
-                \json_encode($value),
+                $encoded,
             ];
         }
     }

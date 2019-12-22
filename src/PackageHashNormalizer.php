@@ -105,7 +105,7 @@ final class PackageHashNormalizer implements NormalizerInterface
             return '5-' . $requirement;
         };
 
-        \uksort($packages, static function ($a, $b) use ($prefix) {
+        \uksort($packages, static function ($a, $b) use ($prefix): int {
             return \strnatcmp($prefix($a), $prefix($b));
         });
 
