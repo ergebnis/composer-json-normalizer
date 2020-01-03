@@ -29,15 +29,19 @@ mutation-tests: vendor ## Runs mutation tests with infection/infection
 	vendor/bin/infection --ignore-msi-with-no-mutations --min-covered-msi=${MIN_COVERED_MSI} --min-msi=${MIN_MSI}
 
 .PHONY: static-code-analysis
-static-code-analysis: vendor ## Runs a static code analysis with phpstan/phpstan
+static-code-analysis: vendor ## Runs a static code analysis with phpstan/phpstan and vimeo/psalm
 	mkdir -p .build/phpstan
 	vendor/bin/phpstan analyse --configuration=phpstan.neon
+	mkdir -p .build/psalm
+	vendor/bin/psalm --config=psalm.xml --show-info=false
 
 .PHONY: static-code-analysis-baseline
-static-code-analysis-baseline: vendor ## Generates a baseline for static code analysis with phpstan/phpstan
+static-code-analysis-baseline: vendor ## Generates a baseline for static code analysis with phpstan/phpstan and vimeo/psalm
 	mkdir -p .build/phpstan
 	echo '' > phpstan-baseline.neon
 	vendor/bin/phpstan analyze --configuration=phpstan.neon --error-format=baselineNeon > phpstan-baseline.neon || true
+	mkdir -p .build/psalm
+	vendor/bin/psalm --config=psalm.xml --set-baseline=psalm-baseline.xml
 
 .PHONY: tests
 tests: vendor ## Runs auto-review, unit, and integration tests with phpunit/phpunit
@@ -49,4 +53,4 @@ tests: vendor ## Runs auto-review, unit, and integration tests with phpunit/phpu
 vendor: composer.json composer.lock
 	composer validate --strict
 	composer install --no-interaction --no-progress --no-suggest
-	docker run --interactive --rm --tty --workdir=/app --volume ${PWD}:/app localheinz/composer-normalize-action:0.5.2
+	docker run --interactive --rm --tty --workdir=/app --volume ${PWD}:/app ergebnis/composer-normalize-action:0.7.0 composer.json --diff

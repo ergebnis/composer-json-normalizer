@@ -27,7 +27,7 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
 
     final public function testImplementsNormalizerInterface(): void
     {
-        self::assertClassImplementsInterface(NormalizerInterface::class, $this->className());
+        self::assertClassImplementsInterface(NormalizerInterface::class, static::className());
     }
 
     /**
@@ -39,7 +39,10 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
     {
         $json = Json::fromEncoded($encoded);
 
-        $reflection = new \ReflectionClass($this->className());
+        /** @var class-string $className */
+        $className = static::className();
+
+        $reflection = new \ReflectionClass($className);
 
         /** @var NormalizerInterface $normalizer */
         $normalizer = $reflection->newInstanceWithoutConstructor();
@@ -79,7 +82,7 @@ abstract class AbstractNormalizerTestCase extends Framework\TestCase
         }
     }
 
-    final protected function className(): string
+    final protected static function className(): string
     {
         $className = \preg_replace(
             '/Test$/',
