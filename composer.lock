@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31fd037d66801b1faeed11200ad6da1c",
+    "content-hash": "22124da1b09229e95cb1ba235196c24d",
     "packages": [
         {
             "name": "ergebnis/json-normalizer",
@@ -1215,29 +1215,29 @@
         },
         {
             "name": "jangregor/phpstan-prophecy",
-            "version": "0.5.0",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jan0707/phpstan-prophecy.git",
-                "reference": "eec7f465cc3990ab64e7d44be1eb780235b51daa"
+                "reference": "542c8ed7228af772562fb0f370d15ec73e3bdecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jan0707/phpstan-prophecy/zipball/eec7f465cc3990ab64e7d44be1eb780235b51daa",
-                "reference": "eec7f465cc3990ab64e7d44be1eb780235b51daa",
+                "url": "https://api.github.com/repos/Jan0707/phpstan-prophecy/zipball/542c8ed7228af772562fb0f370d15ec73e3bdecf",
+                "reference": "542c8ed7228af772562fb0f370d15ec73e3bdecf",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
-                "phpstan/phpstan": "^0.10.0 || ^0.11.0 || ^0.12.2"
+                "phpstan/phpstan": "^0.12.0"
             },
             "conflict": {
                 "phpspec/prophecy": "<1.7,>=2.0",
                 "phpunit/phpunit": "<6.0,>=9.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2.15.0",
-                "localheinz/composer-normalize": "^1.1.3",
+                "ergebnis/composer-normalize": "^2.1.1",
+                "ergebnis/php-cs-fixer-config": "~1.1.2",
                 "phpspec/prophecy": "^1.7",
                 "phpunit/phpunit": "^6.0 || ^7.0"
             },
@@ -1270,7 +1270,7 @@
                 }
             ],
             "description": "Provides a phpstan/phpstan extension for phpspec/prophecy",
-            "time": "2019-12-13T17:56:28+00:00"
+            "time": "2019-12-27T23:57:21+00:00"
         },
         {
             "name": "myclabs/deep-copy",
