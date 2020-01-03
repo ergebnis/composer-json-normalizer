@@ -75,15 +75,15 @@ repository:
   allow_rebase_merge: false
   allow_squash_merge: false
   default_branch: "master"
-  description: ":musical_note: Provides normalizers for normalizing composer.json."
+  description: ":octocat: + :ledger: Provides a GitHub repository template for a PHP library, using GitHub actions."
   has_downloads: true
   has_issues: true
   has_pages: false
   has_projects: false
   has_wiki: false
-  name: "composer-json-normalizer"
+  name: "php-library-template"
   private: false
 
   # https://developer.github.com/v3/repos/branches/#remove-branch-protection
 
-  topics: "composer, json, normalizer"
+  topics: "php, library, template"

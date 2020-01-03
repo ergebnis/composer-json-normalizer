@@ -81,7 +81,7 @@ final class PackageHashNormalizer implements NormalizerInterface
      */
     private function sortPackages(array $packages): array
     {
-        $prefix = static function ($requirement) {
+        $prefix = static function (string $requirement): string {
             if (1 === \preg_match(self::PLATFORM_PACKAGE_REGEX, $requirement)) {
                 return \preg_replace(
                     [
@@ -105,7 +105,7 @@ final class PackageHashNormalizer implements NormalizerInterface
             return '5-' . $requirement;
         };
 
-        \uksort($packages, static function ($a, $b) use ($prefix): int {
+        \uksort($packages, static function (string $a, string $b) use ($prefix): int {
             return \strnatcmp($prefix($a), $prefix($b));
         });
 

@@ -216,6 +216,10 @@ JSON
         self::assertSame(\json_encode(\json_decode($expected->encoded())), $normalized->encoded());
     }
 
+    /**
+     * @param class-string        $className
+     * @param NormalizerInterface $normalizer
+     */
     private function assertComposesNormalizer(string $className, NormalizerInterface $normalizer): void
     {
         self::assertClassExists($className);
